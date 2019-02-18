@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ollie30gameAndroid</string>
+    <string name="background_image">background image</string>
+    <string name="question_number">question number</string>
+    <string name="question">question</string>
+    <string name="answer_1">answer 1</string>
+    <string name="answer_2">answer 2</string>
+    <string name="answer_3">answer 3</string>
+    <string name="answer_4">answer 4</string>
+    <string name="skip">skip</string>
+    <string name="log_out">log out</string>
+    <string name="help">help</string>
+</resources>

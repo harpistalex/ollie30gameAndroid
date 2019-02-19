@@ -53,7 +53,7 @@
                 android:background="@color/colorPrimary" android:singleLine="false" android:textSize="16sp"
                 android:tag="1" android:textAlignment="center" android:gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" android:textAllCaps="false"/>
         <Button
                 android:text="@string/answer_2"
                 android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                 android:background="@color/colorPrimary" android:singleLine="false" android:textSize="16sp"
                 android:tag="2" android:textAlignment="center" android:gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" android:textAllCaps="false"/>
         <Button
                 android:text="@string/answer_3"
                 android:layout_width="match_parent"
@@ -71,7 +71,7 @@
                 android:background="@color/colorPrimary" android:singleLine="false" android:textSize="16sp"
                 android:tag="3" android:textAlignment="center" android:gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" android:textAllCaps="false"/>
         <Button
                 android:text="@string/answer_4"
                 android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                 android:background="@color/colorPrimary" android:singleLine="false" android:textSize="16sp"
                 android:tag="4" android:textAlignment="center" android:gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" android:textAllCaps="false"/>
     </LinearLayout>
     <Button
             android:text="@string/skip"

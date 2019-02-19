@@ -10,4 +10,8 @@
     <string name="skip">skip</string>
     <string name="log_out">log out</string>
     <string name="help">help</string>
+    <string name="log_in">Log In</string>
+    <string name="register">Register</string>
+    <string name="back_to_game">back to game</string>
+    <string name="instructions">Instructions</string>
 </resources>

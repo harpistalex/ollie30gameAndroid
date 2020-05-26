@@ -377,7 +377,7 @@ class GameActivity : AppCompatActivity() {
                         ).show()
 
                     }
-
+                    
                 } else {
                     progressSpinner.hide(indeterminateBarGame, getWindow())
                     println("Callback: Data was not saved to Firebase")

@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".InstructionsActivity">
+        tools:context=".Controller.InstructionsActivity">
 
     <ImageView
             android:layout_width="0dp"
@@ -19,21 +19,11 @@
             android:text="@string/instructions"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:id="@+id/instructions" android:layout_marginTop="70dp"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="90dp"
+            android:id="@+id/instructions" android:layout_marginTop="40dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="40dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="50dp" app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            android:layout_marginEnd="50dp" tools:text="Instructions" android:fontFamily="@font/source_code_pro"
+            android:layout_marginStart="35dp" app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            android:layout_marginEnd="35dp" tools:text="Instructions" android:fontFamily="@font/source_code_pro"
             android:textSize="14sp" android:textColor="@android:color/white" android:textAlignment="center"
             android:background="@color/colorPrimary" android:gravity="center_horizontal|center_vertical"/>
-    <Button
-            android:text="@string/back_to_game"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/button" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="80dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="80dp"
-            android:background="@android:color/transparent" tools:text="Back to game"
-            android:fontFamily="@font/source_code_pro" android:textColor="@android:color/white"
-            android:textAllCaps="false" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/instructions"/>
 </android.support.constraint.ConstraintLayout>

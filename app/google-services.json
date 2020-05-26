@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "33272154738",
+    "firebase_url": "https://ollie-is-30-ba10c.firebaseio.com",
+    "project_id": "ollie-is-30-ba10c",
+    "storage_bucket": "ollie-is-30-ba10c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33272154738:android:b5cedf45d6ffd07e",
+        "android_client_info": {
+          "package_name": "com.alexsamazingapps.ollie30gameandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33272154738-36mibgkta1ji8cedlsndptuidd8f8eg3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alexsamazingapps.ollie30gameandroid",
+            "certificate_hash": "9071e2a34820fba80082a1c1b6ec3d3fcb4d0f6c"
+          }
+        },
+        {
+          "client_id": "33272154738-1qv3lmoiq6ecd6cgtpkcn188u19kqqmb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQrJ9RQl6hjqtn8s3hg_9tz1Ou_uvU5cU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33272154738-1qv3lmoiq6ecd6cgtpkcn188u19kqqmb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "33272154738-0bl3psna9s4cr3kht6pcu68bhggk47rq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.alexsamazingapps.ollie30game"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

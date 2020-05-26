@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ollie30gameAndroid</string>
+    <string name="app_name">ollie_is_30</string>
     <string name="background_image">background image</string>
     <string name="question_number">question number</string>
     <string name="question">question</string>
@@ -14,4 +14,14 @@
     <string name="register">Register</string>
     <string name="back_to_game">back to game</string>
     <string name="instructions">Instructions</string>
+    <string name="reset">RESET</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="offlinemode">offlineMode</string>
+    <string name="loginorregister">loginOrRegister</string>
+    <string name="code">code</string>
+    <string name="username">username</string>
+    <string name="not_connected">Not Connected</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="retype_password">retype password</string>
 </resources>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Controller.LoginActivity">
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:srcCompat="@drawable/background_original"
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:scaleType="centerCrop"
+            android:contentDescription="@string/background_image" app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.0"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/codeText" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" tools:text="code"
+            android:background="@android:color/white"
+            android:padding="6dp"
+            android:autofillHints="@string/code" android:hint="@string/code"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/retypePassword"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/usernameText" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" tools:text="username" android:background="@android:color/white"
+            android:padding="6dp" android:layout_marginTop="32dp" app:layout_constraintTop_toTopOf="@+id/imageView"
+            android:autofillHints="@string/username" android:hint="@string/username" app:layout_constraintHorizontal_bias="0.0"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/emailText" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" tools:text="email" android:background="@android:color/white"
+            android:padding="6dp"
+            android:autofillHints="@string/email" android:hint="@string/email" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/usernameText"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordText"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" tools:text="password" android:background="@android:color/white"
+            android:padding="6dp" app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/emailText" android:hint="@string/password"
+            android:autofillHints="@string/password"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/retypePassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" tools:text="retype password" android:background="@android:color/white"
+            android:padding="6dp" app:layout_constraintHorizontal_bias="0.0"
+            android:hint="@string/retype_password"
+            android:autofillHints="@string/retype_password" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/passwordText" tools:ignore="HardcodedText"/>
+    <Button
+            android:text="@string/log_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginButton" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp" tools:text="Log In"
+            android:fontFamily="@font/source_code_pro" android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:textAllCaps="false"
+            android:onClick="loginButtonClicked"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/codeText"/>
+    <Button
+            android:text="@string/register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/registerButton" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp" tools:text="Register"
+            android:fontFamily="@font/source_code_pro" android:textColor="@android:color/white"
+            android:background="@android:color/darker_gray" app:layout_constraintHorizontal_bias="1.0"
+            android:textAllCaps="false" android:onClick="registerButtonClicked"
+            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/codeText"/>
+    <Button
+            android:text="TEMP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            android:background="@android:color/holo_orange_dark" android:onClick="tempButtonClicked"/>
+    <Button
+            android:text="TEMP LOGOUT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:background="@android:color/holo_orange_dark" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/button2"
+            android:onClick="tempLogoutClicked"/>
+    <ProgressBar
+            android:id="@+id/indeterminateBarGame"
+            android:visibility="invisible"
+            android:layout_width="105dp"
+            android:layout_height="93dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:indeterminateTint="@android:color/white"
+            android:indeterminateTintMode="src_in"
+            android:translationZ="2dp"/>
+    <Button
+            android:text="@string/loginorregister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginOrRegisterButton" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
+            android:fontFamily="@font/source_code_pro" android:textColor="@android:color/white"
+            android:textAllCaps="false" android:textAlignment="center"
+            android:gravity="center|center_horizontal|center_vertical" android:background="@android:color/transparent"
+            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/registerButton"
+            android:onClick="loginOrRegisterClicked" app:layout_constraintHorizontal_bias="1.0"/>
+    <Button
+            android:text="@string/reset_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/resetPasswordButton" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
+            android:fontFamily="@font/source_code_pro" android:textColor="@android:color/white"
+            android:textAllCaps="false" android:textAlignment="center"
+            android:gravity="center|center_horizontal|center_vertical" android:background="@android:color/transparent"
+            android:onClick="resetPassword" app:layout_constraintHorizontal_bias="0.0" tools:text="Reset Password"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/loginOrRegisterButton"/>
+
+</android.support.constraint.ConstraintLayout>

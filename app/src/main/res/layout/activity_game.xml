@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".GameActivity">
+        tools:context=".Controller.GameActivity">
     <ImageView
             android:layout_width="457dp"
             android:layout_height="752dp" app:srcCompat="@drawable/background_original"
@@ -28,7 +28,7 @@
             android:text="@string/question"
             android:layout_width="0dp"
             android:layout_height="140dp"
-            android:id="@+id/questionLabel" android:textSize="20sp"
+            android:id="@+id/questionLabel" android:textSize="18sp"
             android:fontFamily="@font/source_code_pro" android:textColor="@android:color/white"
             android:textAlignment="center"
             android:background="@color/colorPrimary" android:gravity="center" android:padding="5dp"
@@ -44,43 +44,44 @@
             android:layout_marginEnd="55dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="55dp" android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/questionLabel" android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/skipButton" android:gravity="fill_vertical">
+            app:layout_constraintBottom_toTopOf="@+id/skipButton" android:gravity="fill_vertical"
+            android:id="@+id/answerButtonStack">
         <Button
                 android:text="@string/answer_1"
                 android:layout_width="match_parent"
                 android:id="@+id/answerButton1"
                 android:fontFamily="@font/source_code_pro" android:textColor="@android:color/background_light"
-                android:background="@color/colorPrimary" android:singleLine="false" android:textSize="16sp"
+                android:background="@color/colorPrimary" android:singleLine="false" android:textSize="14sp"
                 android:tag="1" android:textAlignment="center" android:gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_height="0dp"
-                android:layout_weight="1" android:textAllCaps="false"/>
+                android:layout_weight="1" android:textAllCaps="false" android:onClick="answerButtonClicked"/>
         <Button
                 android:text="@string/answer_2"
                 android:layout_width="match_parent"
                 android:id="@+id/answerButton2"
                 android:fontFamily="@font/source_code_pro" android:textColor="@android:color/background_light"
-                android:background="@color/colorPrimary" android:singleLine="false" android:textSize="16sp"
+                android:background="@color/colorPrimary" android:singleLine="false" android:textSize="14sp"
                 android:tag="2" android:textAlignment="center" android:gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_height="0dp"
-                android:layout_weight="1" android:textAllCaps="false"/>
+                android:layout_weight="1" android:textAllCaps="false" android:onClick="answerButtonClicked"/>
         <Button
                 android:text="@string/answer_3"
                 android:layout_width="match_parent"
                 android:id="@+id/answerButton3"
                 android:fontFamily="@font/source_code_pro" android:textColor="@android:color/background_light"
-                android:background="@color/colorPrimary" android:singleLine="false" android:textSize="16sp"
+                android:background="@color/colorPrimary" android:singleLine="false" android:textSize="14sp"
                 android:tag="3" android:textAlignment="center" android:gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_height="0dp"
-                android:layout_weight="1" android:textAllCaps="false"/>
+                android:layout_weight="1" android:textAllCaps="false" android:onClick="answerButtonClicked"/>
         <Button
                 android:text="@string/answer_4"
                 android:layout_width="match_parent"
                 android:id="@+id/answerButton4"
                 android:fontFamily="@font/source_code_pro" android:textColor="@android:color/background_light"
-                android:background="@color/colorPrimary" android:singleLine="false" android:textSize="16sp"
+                android:background="@color/colorPrimary" android:singleLine="false" android:textSize="14sp"
                 android:tag="4" android:textAlignment="center" android:gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_height="0dp"
-                android:layout_weight="1" android:textAllCaps="false"/>
+                android:layout_weight="1" android:textAllCaps="false" android:onClick="answerButtonClicked"/>
     </LinearLayout>
     <Button
             android:text="@string/skip"
@@ -91,9 +92,11 @@
             android:textColor="@android:color/white" android:textAlignment="center" android:gravity="center"
             android:padding="5dp"
             android:textSize="19sp"
-            android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/instructionsButton"
-            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/logOutButton"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="24dp" tools:text="Skip"/>
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="24dp" tools:text="Skip"
+            android:tag="5" android:onClick="answerButtonClicked"
+            app:layout_constraintEnd_toStartOf="@+id/instructionsButton"
+            app:layout_constraintStart_toEndOf="@+id/logOutButton"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -103,8 +106,9 @@
             android:padding="5dp"
             android:background="@android:color/transparent" android:text="@string/log_out" android:textSize="15sp"
             android:textAllCaps="false" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="24dp" android:layout_marginEnd="24dp"
-            app:layout_constraintEnd_toEndOf="parent" tools:text="Log Out"/>
+            android:layout_marginBottom="24dp"
+            tools:text="Log Out" android:onClick="logOutButtonClicked" android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="parent"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -113,7 +117,45 @@
             android:textColor="@android:color/white" android:textAlignment="center" android:gravity="center"
             android:padding="5dp"
             android:background="@android:color/transparent" android:text="@string/help" android:textSize="15sp"
-            android:textAllCaps="false" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="24dp" android:layout_marginStart="24dp"
-            app:layout_constraintStart_toStartOf="parent" tools:text="Help"/>
+            android:textAllCaps="false"
+            tools:text="Help"
+            android:onClick="instructionsButtonClicked"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="24dp"/>
+    <Button
+            android:text="@string/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resetButton" android:onClick="resetButtonClicked"
+            android:background="@android:color/holo_orange_dark" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+            android:text="TEMP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tempButton"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/colorPrimaryDark" android:background="@android:color/holo_orange_dark"
+            android:onClick="tempButtonClicked"/>
+    <TextView
+            android:text="@string/not_connected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/offlineMode" tools:text="Not Connected"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:fontFamily="@font/source_code_pro"
+            android:textColor="@android:color/holo_orange_dark"/>
+    <ProgressBar
+            android:id="@+id/indeterminateBarGame"
+            android:visibility="invisible"
+            android:layout_width="105dp"
+            android:layout_height="93dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:translationZ="2dp"
+            android:indeterminateTint="@android:color/white"
+            android:indeterminateTintMode="src_in"/>
 </android.support.constraint.ConstraintLayout>
